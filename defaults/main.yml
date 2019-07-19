@@ -1,6 +1,6 @@
 ---
 julia_full_version: 1.1.1
-julia_minor_version: 1.1
+julia_minor_version: "{{ julia_full_version | splitext | first }}"
 julia_basename: "julia-{{ julia_full_version }}"
 julia_url:
   "https://julialang-s3.julialang.org/bin/linux/x64/{{ julia_minor_version }}/julia-{{ julia_full_version }}-linux-x86_64.tar.gz"

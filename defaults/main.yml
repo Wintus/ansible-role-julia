@@ -8,5 +8,5 @@ julia_gpg_url:
   "https://julialang-s3.julialang.org/bin/linux/x64/{{ julia_minor_version }}/julia-{{ julia_full_version }}-linux-x86_64.tar.gz.asc"
 julia_checksum_url:
   "https://julialang-s3.julialang.org/bin/checksums/julia-{{ julia_full_version }}.sha256"
-julia_bin_path: /usr/local/bin/julia
+julia_install_path: /usr/local
 julia_dir: /opt

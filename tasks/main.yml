@@ -1,2 +1,19 @@
 ---
-# tasks file for julia
+
+- name: download tarball with checksum
+  get_url:
+    url: "{{ julia_url }}"
+    dest: "/tmp/{{ julia_basename }}.tgz"
+    checksum: "sha256:{{ julia_checksum_url }}"
+  register: tarball
+
+- name: "unarchive under {{ julia_dir }}"
+  unarchive:
+    src: "{{ tarball.dest }}"
+    dest: "{{ julia_dir }}"
+
+- name: install julia
+  file:
+    state: link
+    src: "{{ julia_dir }}/{{ julia_basename }}/bin/julia"
+    dest: "{{ julia_bin_path }}"

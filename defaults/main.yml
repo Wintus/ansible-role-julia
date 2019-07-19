@@ -1,2 +1,12 @@
 ---
-# defaults file for julia
+julia_full_version: 1.1.1
+julia_minor_version: 1.1
+julia_basename: "julia-{{ julia_full_version }}"
+julia_url:
+  "https://julialang-s3.julialang.org/bin/linux/x64/{{ julia_minor_version }}/julia-{{ julia_full_version }}-linux-x86_64.tar.gz"
+julia_gpg_url:
+  "https://julialang-s3.julialang.org/bin/linux/x64/{{ julia_minor_version }}/julia-{{ julia_full_version }}-linux-x86_64.tar.gz.asc"
+julia_checksum_url:
+  "https://julialang-s3.julialang.org/bin/checksums/julia-{{ julia_full_version }}.sha256"
+julia_bin_path: /usr/local/bin/julia
+julia_dir: /opt
